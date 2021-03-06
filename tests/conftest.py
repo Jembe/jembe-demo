@@ -1,5 +1,5 @@
 import pytest
-from dapp import create_app
+from jembe_demo import create_app
 
 
 @pytest.fixture

@@ -1,4 +1,4 @@
-from examples.dapp.instance.config import JEMBE_UPLOAD_FOLDER
+from instance.config import JEMBE_UPLOAD_FOLDER
 from jembe.files import Storage
 from typing import TYPE_CHECKING, Type
 from jembe import Jembe

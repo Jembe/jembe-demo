@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING, Optional, Union, List, Any
 from jembe import Component, File, listener
 from wtforms import Form, BooleanField, FileField, validators
-from dapp.jmb import jmb
+from jembe_demo.jmb import jmb
 
 # from wtforms import Form, FileField
 
@@ -120,7 +120,7 @@ class DemoUploadPage(Component):
             """
             <html>
             <head>
-                <link rel="stylesheet" href="{{ url_for('static', filename='css/dapp.css') }}">
+                <link rel="stylesheet" href="{{ url_for('static', filename='css/ jembe_demo.css') }}">
             </head>
             <body>
             <nav>

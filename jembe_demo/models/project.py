@@ -1,5 +1,5 @@
 from enum import unique
-from dapp.db import db
+from jembe_demo.db import db
 
 
 class Project(db.Model):

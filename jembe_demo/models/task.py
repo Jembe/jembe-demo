@@ -1,5 +1,5 @@
 from sqlalchemy.orm import backref
-from dapp.db import db
+from jembe_demo.db import db
 
 
 class Task(db.Model):

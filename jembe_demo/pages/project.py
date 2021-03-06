@@ -26,9 +26,9 @@ from dataclasses import dataclass, field
 from jembe import Component, action, component, config, listener, BadRequest
 from sqlalchemy.exc import SQLAlchemyError
 from wtforms_sqlalchemy.orm import model_form
-from dapp.models import Project, Task
-from dapp.jmb import jmb
-from dapp.db import db
+from jembe_demo.models import Project, Task
+from jembe_demo.jmb import jmb
+from jembe_demo.db import db
 
 if TYPE_CHECKING:
     from flask_sqlalchemy.model import Model
