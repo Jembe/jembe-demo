@@ -4,7 +4,7 @@ with JUST MAKE IT WORK mindset.
 """
 from functools import cached_property
 
-from jembe.component_config import CConfigRedisplayFlag, ComponentConfig
+from jembe.component_config import RedisplayFlag, ComponentConfig
 from jembe.common import ComponentRef
 from jembe.utils import run_only_once
 from typing import (
@@ -150,7 +150,7 @@ class ViewRecord(OnConfirmationSupportMixin, Component):
             inject_into_components: Optional[
                 Callable[["Component", "ComponentConfig"], dict]
             ] = None,
-            redisplay: Tuple["CConfigRedisplayFlag", ...] = (),
+            redisplay: Tuple["RedisplayFlag", ...] = (),
             changes_url: bool = True,
             url_query_params: Optional[Dict[str, str]] = None,
         ):
@@ -219,7 +219,7 @@ class EditRecord(FormLoadDumpMixin, OnConfirmationSupportMixin, Component):
             inject_into_components: Optional[
                 Callable[["Component", "ComponentConfig"], dict]
             ] = None,
-            redisplay: Tuple["CConfigRedisplayFlag", ...] = (),
+            redisplay: Tuple["RedisplayFlag", ...] = (),
             changes_url: bool = True,
             url_query_params: Optional[Dict[str, str]] = None,
         ):
@@ -375,7 +375,7 @@ class AddRecord(FormLoadDumpMixin, OnConfirmationSupportMixin, Component):
             inject_into_components: Optional[
                 Callable[["Component", "ComponentConfig"], dict]
             ] = None,
-            redisplay: Tuple["CConfigRedisplayFlag", ...] = (),
+            redisplay: Tuple["RedisplayFlag", ...] = (),
             changes_url: bool = True,
             url_query_params: Optional[Dict[str, str]] = None,
         ):
@@ -488,7 +488,7 @@ class ListRecords(OnConfirmationSupportMixin, Component):
             inject_into_components: Optional[
                 Callable[["Component", "ComponentConfig"], dict]
             ] = None,
-            redisplay: Tuple["CConfigRedisplayFlag", ...] = (),
+            redisplay: Tuple["RedisplayFlag", ...] = (),
             changes_url: bool = True,
             url_query_params: Optional[Dict[str, str]] = None,
         ):
