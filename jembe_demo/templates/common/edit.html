@@ -1,5 +1,5 @@
 <h2>
-    <button jmb-on:click="cancel()">Back</button>
+    <button jmb-on:click="cancel()" class="button button-clear">Back</button>
     {# <button jmb-on:click="$jmb.component('..',{mode:null}).display()">Back</button> #}
     Edit {{model_info.verbose_name}} 
     <button 
@@ -7,7 +7,7 @@
         jmb-on:click="goto_record({{prev_record_id}})"
         {% else %}
         disabled
-        {% endif %}>
+        {% endif %} class="button button-clear">
         Prev
     </button>
     <button 
@@ -15,7 +15,7 @@
         jmb-on:click="goto_record({{next_record_id}})"
         {% else %}
         disabled
-        {% endif %}>
+        {% endif %} class="button button-clear">
         Next
     </button>
 </h2>

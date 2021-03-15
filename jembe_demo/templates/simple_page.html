@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/jembe_demo.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
 <body>
+    <div class="container">
    <h1>Simple page</h1> 
 
     <h2>List of jembe demo pages</h2>
@@ -14,6 +18,7 @@
         <li><a href="/main/projects">Projects</a></li>
         <li><a href="/demo_upload">Demo upload</a></li>
     </ul>
+    </div>
    <script src="{{ url_for('jembe.static', filename='js/jembe.js') }}"></script>
 </body>
 </html>
