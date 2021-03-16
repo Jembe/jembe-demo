@@ -2,7 +2,7 @@
     {{model_info.verbose_name_plural}}
 </h1>
 {% if component('add').is_accessible() %}
-    <button jmb-on:click="{{component().jrl}}">Add {{model_info.verbose_name}}</button>
+    <button jmb-on:click="{{component().jrl}}" class="button-outline">Add {{model_info.verbose_name}}</button>
 {% endif %}
 <table>
     <thead>
