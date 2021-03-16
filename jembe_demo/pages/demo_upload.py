@@ -129,9 +129,9 @@ class DemoUploadPage(Component):
             <div class="container">
                 {% include "global_nav.html" %}
             <nav>
-                <a href="{{component('simple').url}}" jmb-on:click="{{component().jrl}};$event.stopPropagation();$event.preventDefault();">Simple Upload</a>
-                <a href="{{component('multi').url}}" jmb-on:click="{{component().jrl}};$event.stopPropagation();$event.preventDefault();">Multiple Upload</a>
-                <a href="{{component('wtform').url}}" jmb-on:click="{{component().jrl}};$event.stopPropagation();$event.preventDefault();">WTForm Upload</a>
+                <a href="{{component('simple').url}}" jmb-on:click.stop.prevent="{{component().jrl}}">Simple Upload</a>
+                <a href="{{component('multi').url}}" jmb-on:click.stop.prevent="{{component().jrl}}">Multiple Upload</a>
+                <a href="{{component('wtform').url}}" jmb-on:click.stop.prevent="{{component().jrl}}">WTForm Upload</a>
             </nav>
             {{component(display_mode)}}
             </div>
