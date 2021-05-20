@@ -56,7 +56,7 @@ class ConfirmationDialog(Component):
         super().__init__()
 
     @classmethod
-    def load_init_param(cls, name: str, value: Any) -> Any:
+    def load_init_param(cls, config: "ComponentConfig", name: str, value: Any) -> Any:
         if name == "confirmation":
             return (
                 Confirmation(
@@ -68,7 +68,7 @@ class ConfirmationDialog(Component):
                 if value is not None
                 else None
             )
-        return super().load_init_param(name, value)
+        return super().load_init_param(config, name, value)
 
     @listener(event="requestConfirmation")
     def on_request_confirmation(self, event: "Event"):
@@ -125,10 +125,10 @@ class FormLoadDumpMixin:
         return super().dump_init_param(name, value)  # type:ignore
 
     @classmethod
-    def load_init_param(cls, name: str, value: Any) -> Any:
+    def load_init_param(cls, config: "ComponentConfig", name: str, value: Any) -> Any:
         if name == "form":
             return ProjectForm(data=value)
-        return super().load_init_param(name, value)  # type:ignore
+        return super().load_init_param(config, name, value)  # type:ignore
 
 
 class OnConfirmationSupportMixin:

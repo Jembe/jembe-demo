@@ -8,7 +8,7 @@ from jembe_demo.jmb import jmb
 
 if TYPE_CHECKING:
     from flask import Response
-    from jembe import Event
+    from jembe import Event, ComponentConfig
 
 
 class DemoUploadSimple(Component):
@@ -90,12 +90,12 @@ class DemoUploadWtForm(Component):
         return super().dump_init_param(name, value)  # type:ignore
 
     @classmethod
-    def load_init_param(cls, name: str, value: Any) -> Any:
+    def load_init_param(cls, config: "ComponentConfig", name: str, value: Any) -> Any:
         if name == "form":
             if "photo" in value and value["photo"] is not None:
                 value["photo"] = File.load_init_param(value["photo"])
             return PhotoForm(data=value)
-        return super().load_init_param(name, value)  # type:ignore
+        return super().load_init_param(config, name, value)  # type:ignore
 
 @jmb.page(
     "demo_upload",
